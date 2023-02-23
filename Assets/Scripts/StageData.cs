@@ -5,19 +5,18 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "CreateStageData")]
 public class StageData : ScriptableObject
 {
-    [SerializeField] List<StagePair> _stageList = new List<StagePair>();
-
-    public GameObject GetStage(PlayStage stage)
+    [SerializeField] StageParameter[] _stageParms;
+    public GameObject GetStage(StageType stageType)
     {
         GameObject stagePrefab = null;
 
-        foreach (var pair in _stageList)
+        foreach (var param in _stageParms)
         {
-            //if(stage == pair._playStage)
-            //{
-
-            //    break;
-            //}
+            if (stageType == param.StageType)
+            {
+                Instantiate(param.Stage);
+                break;
+            }
         }
 
         return stagePrefab;
@@ -25,14 +24,15 @@ public class StageData : ScriptableObject
 }
 
 [System.Serializable]
-class StagePair
+class StageParameter
 {
-    [SerializeField] PlayStage _playStage;
+    public StageType StageType => _stageType;
+    public GameObject Stage => _stage;
+    [SerializeField] StageType _stageType;
     [SerializeField] GameObject _stage;
 
-
 }
-public enum PlayStage
+public enum StageType
 {
     Tutorial,
     Stage1,

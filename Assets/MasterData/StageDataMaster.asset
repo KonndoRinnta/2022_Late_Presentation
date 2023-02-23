@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 734e7f34746fa8445ac99390dacc807a, type: 3}
   m_Name: StageDataMaster
   m_EditorClassIdentifier: 
-  _stageList:
-  - _playStage: 0
+  _stageParms:
+  - _stageType: 0
     _stage: {fileID: 0}
-  - _playStage: 1
+  - _stageType: 1
     _stage: {fileID: 0}
-  - _playStage: 2
+  - _stageType: 2
     _stage: {fileID: 0}
