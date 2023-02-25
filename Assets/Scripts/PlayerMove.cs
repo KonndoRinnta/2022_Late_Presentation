@@ -8,6 +8,9 @@ public class PlayerMove : MonoBehaviour
     [Header("移動速度")] float _speed;
 
     [SerializeField]
+    [Header("空中での移動速度")] float _airSpeed = 1;
+
+    [SerializeField]
     [Header("ジャンプ力")] float _jumpPower;
 
     [SerializeField]
@@ -22,15 +25,17 @@ public class PlayerMove : MonoBehaviour
     }
     void Update()
     {
-        moveX = Input.GetAxis("Horizontal") * _speed;
-        moveZ = Input.GetAxis("Vertical") * _speed;
+        moveX = Input.GetAxis("Horizontal") * _speed * _airSpeed;
+        moveZ = Input.GetAxis("Vertical") * _speed * _airSpeed;
         rb.AddForce(new Vector3(moveX, 0, moveZ));
         if(_isGround == true)
         {
             if(Input.GetKeyDown("space"))
             {
+                _airSpeed = 0.2f;
                 Debug.Log("a");
-                rb.AddForce(new Vector3(0, _jumpPower, 0));
+                rb.AddForce(0, _jumpPower, 0, ForceMode.Impulse);
+                _isGround = false;
             }
         }
     }
@@ -38,6 +43,7 @@ public class PlayerMove : MonoBehaviour
     {
         if(collision.gameObject.tag == _groundTag)
         {
+            _airSpeed = 1;
             _isGround = true;
         }
     }
