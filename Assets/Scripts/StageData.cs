@@ -26,11 +26,10 @@ public class StageData : ScriptableObject
 [System.Serializable]
 class StageParameter
 {
-    public StageType StageType => _stageType;
-    public GameObject Stage => _stage;
     [SerializeField] StageType _stageType;
     [SerializeField] GameObject _stage;
-
+    public StageType StageType => _stageType;
+    public GameObject Stage => _stage;
 }
 public enum StageType
 {

@@ -16,6 +16,6 @@ MonoBehaviour:
   - _stageType: 0
     _stage: {fileID: 0}
   - _stageType: 1
-    _stage: {fileID: 0}
+    _stage: {fileID: 1167785263324264874, guid: d68ad2f696cff0f4ea92405a873afa0f, type: 3}
   - _stageType: 2
     _stage: {fileID: 0}

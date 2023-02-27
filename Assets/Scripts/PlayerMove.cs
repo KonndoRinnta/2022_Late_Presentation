@@ -41,6 +41,7 @@ public class PlayerMove : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        //タグではなくプレイヤーの下にrayを飛ばして判定するようにする
         if(collision.gameObject.tag == _groundTag)
         {
             _airSpeed = 1;
