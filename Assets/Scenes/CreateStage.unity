@@ -216,6 +216,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1510718672 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1296004353066852583, guid: c3d0e752e6a60a34390f11e3f3db07e3, type: 3}
+  m_PrefabInstance: {fileID: 1586147678}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9040d3ea14095944a9c14b7f398c2dd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1586147678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -223,6 +234,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7453016845484346825}
     m_Modifications:
+    - target: {fileID: 653426037117701662, guid: c3d0e752e6a60a34390f11e3f3db07e3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 653426037117701662, guid: c3d0e752e6a60a34390f11e3f3db07e3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.12
+      objectReference: {fileID: 0}
     - target: {fileID: 4351391613883524418, guid: c3d0e752e6a60a34390f11e3f3db07e3, type: 3}
       propertyPath: m_Name
       value: Respawn2
@@ -372,9 +391,13 @@ PrefabInstance:
       value: Stage1
       objectReference: {fileID: 0}
     - target: {fileID: 1205191346382659228, guid: d68ad2f696cff0f4ea92405a873afa0f, type: 3}
-      propertyPath: _spawnPoint.Array.data[1]
+      propertyPath: _spawnPoint.Array.data[0]
       value: 
       objectReference: {fileID: 7453016845484346824}
+    - target: {fileID: 1205191346382659228, guid: d68ad2f696cff0f4ea92405a873afa0f, type: 3}
+      propertyPath: _spawnPoint.Array.data[1]
+      value: 
+      objectReference: {fileID: 1510718672}
     - target: {fileID: 7920485112356229082, guid: d68ad2f696cff0f4ea92405a873afa0f, type: 3}
       propertyPath: m_RootOrder
       value: 2

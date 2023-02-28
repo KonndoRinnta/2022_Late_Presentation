@@ -117,6 +117,7 @@ MonoBehaviour:
   _airSpeed: 1
   _jumpPower: 35
   _groundTag: Ground
+  _distans: 2.7
 --- !u!135 &3432284048338068816
 SphereCollider:
   m_ObjectHideFlags: 0
