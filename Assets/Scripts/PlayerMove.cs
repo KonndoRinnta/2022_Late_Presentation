@@ -16,19 +16,24 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     [Header("è∞ÇÃÉ^ÉOñº")] string _groundTag = "Ground";
     [SerializeField]float _distans = 1.0f;
-    private Rigidbody rb;
+    private Rigidbody _rb;
     private bool _isGround = false;
     float moveX;
     float moveZ;
+    Vector3 _dir = Vector3.zero;
+    Camera _camera = null;
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        _rb = GetComponent<Rigidbody>();
+        _camera = Camera.main;
     }
     void Update()
     {
-        moveX = Input.GetAxis("Horizontal") * _speed * _airSpeed;
-        moveZ = Input.GetAxis("Vertical") * _speed * _airSpeed;
-        rb.AddForce(new Vector3(moveX, 0, moveZ));
+        _dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
+        _dir = _camera.transform.rotation * _dir;
+        _rb.AddForce(_dir * _speed * _airSpeed);
+        Vector3 vel = _rb.velocity.normalized;
+
 
         Vector3 rayPosition = transform.position + new Vector3();
         Ray ray = new Ray(rayPosition, Vector3.down);
@@ -38,9 +43,9 @@ public class PlayerMove : MonoBehaviour
         {
             if (_isGround)
             {
-                _airSpeed = 0.2f;
+
                 Debug.Log("a");
-                rb.AddForce(0, _jumpPower, 0, ForceMode.Impulse);
+                _rb.AddForce(0, _jumpPower, 0, ForceMode.Impulse);
             }
         }
     }
