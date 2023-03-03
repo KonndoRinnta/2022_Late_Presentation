@@ -8,9 +8,6 @@ public class PlayerMove : MonoBehaviour
     [Header("移動速度")] float _speed;
 
     [SerializeField]
-    [Header("空中での移動速度")] float _airSpeed = 1;
-
-    [SerializeField]
     [Header("ジャンプ力")] float _jumpPower;
 
     [SerializeField]
@@ -31,7 +28,7 @@ public class PlayerMove : MonoBehaviour
     {
         _dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
         _dir = _camera.transform.rotation * _dir;
-        _rb.AddForce(_dir * _speed * _airSpeed);
+        _rb.AddForce(_dir * _speed);
         Vector3 vel = _rb.velocity.normalized;
 
 
