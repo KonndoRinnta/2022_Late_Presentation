@@ -40,7 +40,6 @@ public class PlayerMove : MonoBehaviour
         {
             if (_isGround)
             {
-
                 Debug.Log("a");
                 _rb.AddForce(0, _jumpPower, 0, ForceMode.Impulse);
             }

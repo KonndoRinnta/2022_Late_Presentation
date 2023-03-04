@@ -246,6 +246,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stage2
       objectReference: {fileID: 0}
+    - target: {fileID: 755621692884844225, guid: 068279ef044ed4c4689a895f5dcfed0e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 1141838172137834415, guid: 068279ef044ed4c4689a895f5dcfed0e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481061328923018461, guid: 068279ef044ed4c4689a895f5dcfed0e, type: 3}
+      propertyPath: m_Name
+      value: Goal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481061328923018461, guid: 068279ef044ed4c4689a895f5dcfed0e, type: 3}
+      propertyPath: m_TagString
+      value: Goal
+      objectReference: {fileID: 0}
     - target: {fileID: 8620866402554300593, guid: 068279ef044ed4c4689a895f5dcfed0e, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -370,8 +386,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025561490}
-  m_LocalRotation: {x: 0.0028240024, y: 0.98562956, z: 0.016559724, w: -0.1680838}
-  m_LocalPosition: {x: 201, y: 45.8685, z: -9.3}
+  m_LocalRotation: {x: 0.17050375, y: -0.6894537, z: 0.17221944, w: 0.6825852}
+  m_LocalPosition: {x: 4.822033, y: 4.805784, z: 10.413839}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -423,8 +439,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908fc5322547ed34fa273c2f7f4ca98a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 3432284048338068819, guid: 5747bbbe1032ad54a8f4c82aa17f42dc, type: 3}
-  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &2041829970
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,6 +451,7 @@ GameObject:
   - component: {fileID: 2041829973}
   - component: {fileID: 2041829972}
   - component: {fileID: 2041829971}
+  - component: {fileID: 2041829975}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -520,3 +535,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2041829975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041829970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 279c45d3df8b71445be6a7197dca4a9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 8
+  _jumpPower: 35
+  _groundTag: Ground
+  _distans: 4
