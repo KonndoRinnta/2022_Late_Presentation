@@ -172,7 +172,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8126966765393302640}
   - component: {fileID: 1960872083660373917}
-  - component: {fileID: 6640001146805653003}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -209,19 +208,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _goal: {fileID: 0}
---- !u!114 &6640001146805653003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8899985439610113738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 279c45d3df8b71445be6a7197dca4a9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 8
-  _jumpPower: 35
-  _groundTag: Ground
-  _distans: 4
